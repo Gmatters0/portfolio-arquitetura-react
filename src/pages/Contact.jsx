@@ -1,9 +1,18 @@
-import React from 'react'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
+import Banner from '../components/Banner/Banner'
+import ContactForm from '../components/ContactForm/ContactForm'
+
 
 function Contact() {
   return (
     <>
-    CONTACT
+      <Header />
+      <Banner title="Contact Us" image="contactBanner.svg"/>
+      <div className="container">
+        <ContactForm />
+      </div>
+      <Footer />
     </>
   )
 }

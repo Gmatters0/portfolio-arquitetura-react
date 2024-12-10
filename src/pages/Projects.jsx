@@ -1,9 +1,17 @@
-import React from 'react'
+import Header from "../components/Header/Header"
+import Footer from '../components/Footer/Footer'
+import Banner from '../components/Banner/Banner'
+import ProjectsList from "../components/ProjectsList/ProjectsList"
 
 function Projects() {
   return (
     <>
-    PROJECTS
+      <Header />
+      <Banner title="Projects" image="projectsBanner.svg"/>
+      <div className="container">
+        <ProjectsList />
+      </div>
+      <Footer />
     </>
   )
 }

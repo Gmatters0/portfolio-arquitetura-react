@@ -1,0 +1,26 @@
+.text-section {
+    column-gap: 97px;
+    margin: 160px auto;
+}
+
+.text-section-text {
+    flex: 1;
+
+    & h2{
+        font-size: 44px;
+    }
+
+    & p{
+        font-size: 22px;
+    }
+}
+
+.text-section-paragraphs{
+    flex: 1.6;
+}
+
+@media (max-width: 768px) {
+    .text-section {
+        flex-direction: column;
+    }
+}

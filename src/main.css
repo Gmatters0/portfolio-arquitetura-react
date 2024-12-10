@@ -18,24 +18,62 @@ a{
   background-color: #0C70F2;
 }
 .primary-color{
-  background-color: #0C70F2;
+  color: #0C70F2;
 }
 .secondary-background{
   background-color: #1D1D1D;
 }
 .secondary-color{
-  background-color: #1D1D1D;
+  color: #1D1D1D;
 }
 .tertiary-background{
   background-color: #F6F6F6;
 }
 .tertiary-color{
-  background-color: #F6F6F6;
+  color: #F6F6F6;
+}
+
+/* FORM */
+
+.form-input{
+  border: none;
+  border-bottom: 1px solid #292F36;
+  color: #4D5053;
+  font-size: 22px;
+  font-family: "Jost", sans-serif;
+  padding: 0 0 13px 0;
+  outline: none;
+  width: 100%;
+}
+
+.form-input::placeholder{
+  color: #4D5053;
+  opacity: 1;
+}
+
+/* TYPOGRAPHY */
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "DM Serif Display", serif;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #292F36;
+}
+
+p{
+  line-height: 150%;
+}
+
+.txt-center{
+  text-align: center;
 }
 
 /* GRID */
 
 .container{
+  box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
   max-width: 1140px;
@@ -57,6 +95,10 @@ a{
 
 .fd-column{
   flex-direction: column;
+}
+
+.fd-row{
+  flex-direction: row;
 }
 
 .jc-center{

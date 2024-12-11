@@ -1,7 +1,8 @@
-import "./Footer.css";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 // ASSETS
+import "./Footer.css";
 import Facebook from "../../assets/facebook.svg";
 import Twitter from "../../assets/twitter.svg";
 import Linkedin from "../../assets/linkedin.svg";
@@ -10,7 +11,15 @@ import BrasilFlag from "../../assets/brasilFlag.svg";
 import UsaFlag from "../../assets/usaFlag.svg";
 import LogoDNC from "../../assets/logoDNC.svg";
 
+// UTILS
+import { AppContext } from "../../contexts/AppContext";
+
 function Footer() {
+  const appContext = useContext(AppContext)
+  const changeLanguage = (country) => {
+    appContext.setLanguage(country)
+  }
+
   return (
     <footer>
       <div className="container">
@@ -18,8 +27,7 @@ function Footer() {
           <div className="footer-logo-col">
             <img src={LogoDNC} className="footer-logo"></img>
             <p>
-              A escola que prepara você para as profissões em alta no mercado de
-              trabalho.
+              {appContext.languages[appContext.language].general.footerLogoText}
             </p>
             <div className="d-flex social-links">
               <a href="#" target="_blank">
@@ -38,24 +46,24 @@ function Footer() {
           </div>
           <div className="d-flex mobile-fd-column">
             <div className="footer-col">
-              <h3>Pages</h3>
+              <h3>{appContext.languages[appContext.language].general.pages}</h3>
               <ul>
                 <Link to="/">
-                  <li>Home</li>
+                  <li>{appContext.languages[appContext.language].menu.home}</li>
                 </Link>
                 <Link to="/about">
-                  <li>About us</li>
+                  <li>{appContext.languages[appContext.language].menu.about}</li>
                 </Link>
                 <Link to="/projects">
-                  <li>Projects</li>
+                  <li>{appContext.languages[appContext.language].menu.projects}</li>
                 </Link>
                 <Link to="/contact">
-                  <li>Contact</li>
+                  <li>{appContext.languages[appContext.language].menu.contact}</li>
                 </Link>
               </ul>
             </div>
             <div className="footer-col">
-              <h3>Contact</h3>
+              <h3>{appContext.languages[appContext.language].menu.contact}</h3>
               <p>R. Justino Cobra, 61 – Vila Ema | São José dos Campos – SP | CEP 12243-030</p>
               <p>suporte@escoladnc.com.br</p>
               <p>(19) 99187-4342</p>
@@ -65,8 +73,8 @@ function Footer() {
         <div className="d-flex jc-space-between footer-copy">
             <p>Copyright © DNC - 2024</p>
             <div className="langs-area d-flex">
-                <img src={BrasilFlag} height="29px"></img>
-                <img src={UsaFlag} height="29px"></img>
+                <img onClick={() => changeLanguage('br')} src={BrasilFlag} height="29px"></img>
+                <img onClick={() => changeLanguage('en')} src={UsaFlag} height="29px"></img>
             </div>
           </div>
         <div></div>

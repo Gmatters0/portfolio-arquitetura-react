@@ -3,11 +3,17 @@ import Footer from '../components/Footer/Footer'
 import Banner from '../components/Banner/Banner'
 import AboutText from '../components/AboutText/AboutText'
 
+import { useContext } from 'react'
+
+import { AppContext } from '../contexts/AppContext'
+
 function About() {
+  const appContext = useContext(AppContext)
+
   return (
     <>
       <Header />
-      <Banner title="About" image="aboutBanner.svg"/>
+      <Banner title={appContext.languages[appContext.language].menu.about} image="aboutBanner.svg"/>
       <div className="container">
         <AboutText />
       </div>

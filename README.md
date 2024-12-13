@@ -3,7 +3,7 @@
   Website developed through classes on the DNC school's front-end development course.
 
   - React.js + Vite
-  - API consumption
+  - DNC API for projects and languages
   - Mobile Responsiveness with media query
   - ContextApi for language switching
   - Session and Local storage

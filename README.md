@@ -1,8 +1,13 @@
-# React + Vite
+# Architecture Portfolio Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  Website developed through classes on the DNC school's front-end development course.
 
-Currently, two official plugins are available:
+  React.js + Vite
+  API consumption
+  Mobile Responsiveness with media query
+  ContextApi for language switching
+  Session and Local storage
+  Form validation with Regex
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

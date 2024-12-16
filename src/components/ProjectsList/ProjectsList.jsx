@@ -3,7 +3,7 @@ import "./ProjectsList.css";
 
 //ASSETS
 import LikeOutline from "../../assets/like.svg";
-import LikeFilled from "../../assets/LikeFilled.svg";
+import LikeFilled from "../../assets/likeFilled.svg";
 
 //UTILS
 import { getApiData } from "../../services/apiServices";

@@ -8,3 +8,5 @@
   - ContextApi for language switching
   - Session and Local storage
   - Form validation with Regex
+
+  Look my project: https://portfolio-arquitetura-react.vercel.app/
